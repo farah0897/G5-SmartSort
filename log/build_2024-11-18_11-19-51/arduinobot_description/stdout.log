@@ -1,0 +1,59 @@
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (2.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/farr97/arduinobot_ws/build/arduinobot_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/display.launch.py
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/gazebo.launch.py
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/robot_state_publisher.launch.py
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot.urdf.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot_gazebo.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot_ros2_control.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arms.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/base_and_base_plate.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/camera.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/connectors.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/grippers.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/properties.xacro
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/Gripp_supporter.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_1.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_2.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_3.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/base_plate_2.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/basement_1.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_1.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_2.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_3.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/inner_circle.stl
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/config/display.rviz
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/model.config
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/package_run_dependencies/arduinobot_description
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/parent_prefix_path/arduinobot_description
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/path.sh
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/path.dsv
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.bash
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.sh
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.zsh
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.dsv
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/package.dsv
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/packages/arduinobot_description
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/cmake/arduinobot_descriptionConfig.cmake
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/cmake/arduinobot_descriptionConfig-version.cmake
+-- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/package.xml

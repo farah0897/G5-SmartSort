@@ -1,0 +1,9 @@
+# CMake generated Testfile for 
+# Source directory: /home/farr97/arduinobot_ws/src/arduinobot_msgs
+# Build directory: /home/farr97/arduinobot_ws/build/arduinobot_msgs
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(xmllint "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/farr97/arduinobot_ws/build/arduinobot_msgs/test_results/arduinobot_msgs/xmllint.xunit.xml" "--package-name" "arduinobot_msgs" "--output-file" "/home/farr97/arduinobot_ws/build/arduinobot_msgs/ament_xmllint/xmllint.txt" "--command" "/opt/ros/jazzy/bin/ament_xmllint" "--xunit-file" "/home/farr97/arduinobot_ws/build/arduinobot_msgs/test_results/arduinobot_msgs/xmllint.xunit.xml")
+set_tests_properties(xmllint PROPERTIES  LABELS "xmllint;linter" TIMEOUT "60" WORKING_DIRECTORY "/home/farr97/arduinobot_ws/src/arduinobot_msgs" _BACKTRACE_TRIPLES "/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_add_test.cmake;125;add_test;/opt/ros/jazzy/share/ament_cmake_xmllint/cmake/ament_xmllint.cmake;50;ament_add_test;/opt/ros/jazzy/share/ament_cmake_xmllint/cmake/ament_cmake_xmllint_lint_hook.cmake;18;ament_xmllint;/opt/ros/jazzy/share/ament_cmake_xmllint/cmake/ament_cmake_xmllint_lint_hook.cmake;0;;/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake;48;include;/opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_package_hook.cmake;21;ament_execute_extensions;/opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_package_hook.cmake;0;;/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake;48;include;/opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake;66;ament_execute_extensions;/home/farr97/arduinobot_ws/src/arduinobot_msgs/CMakeLists.txt;27;ament_package;/home/farr97/arduinobot_ws/src/arduinobot_msgs/CMakeLists.txt;0;")
+subdirs("arduinobot_msgs__py")

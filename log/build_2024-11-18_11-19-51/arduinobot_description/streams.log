@@ -1,0 +1,65 @@
+[0.018s] Invoking command in '/home/farr97/arduinobot_ws/build/arduinobot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/farr97/arduinobot_ws/src/arduinobot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/farr97/arduinobot_ws/install/arduinobot_description
+[0.145s] -- The C compiler identification is GNU 13.2.0
+[0.968s] -- The CXX compiler identification is GNU 13.2.0
+[1.679s] -- Detecting C compiler ABI info
+[1.943s] -- Detecting C compiler ABI info - done
+[1.951s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.951s] -- Detecting C compile features
+[1.951s] -- Detecting C compile features - done
+[2.060s] -- Detecting CXX compiler ABI info
+[2.304s] -- Detecting CXX compiler ABI info - done
+[2.316s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.316s] -- Detecting CXX compile features
+[2.316s] -- Detecting CXX compile features - done
+[2.319s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.479s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.559s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.692s] -- Configuring done (2.7s)
+[2.698s] -- Generating done (0.0s)
+[2.699s] -- Build files have been written to: /home/farr97/arduinobot_ws/build/arduinobot_description
+[2.705s] Invoked command in '/home/farr97/arduinobot_ws/build/arduinobot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/farr97/arduinobot_ws/src/arduinobot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/farr97/arduinobot_ws/install/arduinobot_description
+[2.707s] Invoking command in '/home/farr97/arduinobot_ws/build/arduinobot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/farr97/arduinobot_ws/build/arduinobot_description -- -j12 -l12
+[2.741s] Invoked command in '/home/farr97/arduinobot_ws/build/arduinobot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/farr97/arduinobot_ws/build/arduinobot_description -- -j12 -l12
+[2.767s] Invoking command in '/home/farr97/arduinobot_ws/build/arduinobot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/farr97/arduinobot_ws/build/arduinobot_description
+[2.774s] -- Install configuration: ""
+[2.774s] -- Execute custom install script
+[2.776s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/display.launch.py
+[2.784s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/gazebo.launch.py
+[2.791s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/launch/robot_state_publisher.launch.py
+[2.801s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot.urdf.xacro
+[2.809s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot_gazebo.xacro
+[2.817s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arduinobot_ros2_control.xacro
+[2.824s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/arms.xacro
+[2.832s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/base_and_base_plate.xacro
+[2.840s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/camera.xacro
+[2.847s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/connectors.xacro
+[2.854s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/grippers.xacro
+[2.862s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/urdf/properties.xacro
+[2.870s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/Gripp_supporter.stl
+[2.878s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_1.stl
+[2.885s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_2.stl
+[2.893s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/arm_3.stl
+[2.900s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/base_plate_2.stl
+[2.910s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/basement_1.stl
+[2.921s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_1.stl
+[2.927s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_2.stl
+[2.935s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/gripper_3.stl
+[2.943s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/meshes/inner_circle.stl
+[2.951s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/config/display.rviz
+[2.959s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/model.config
+[2.967s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/package_run_dependencies/arduinobot_description
+[2.975s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/parent_prefix_path/arduinobot_description
+[2.982s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/ament_prefix_path.sh
+[2.990s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/ament_prefix_path.dsv
+[2.998s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/path.sh
+[3.007s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/environment/path.dsv
+[3.014s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.bash
+[3.025s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.sh
+[3.036s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.zsh
+[3.044s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/local_setup.dsv
+[3.053s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/package.dsv
+[3.061s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/ament_index/resource_index/packages/arduinobot_description
+[3.070s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/cmake/arduinobot_descriptionConfig.cmake
+[3.077s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/cmake/arduinobot_descriptionConfig-version.cmake
+[3.084s] -- Symlinking: /home/farr97/arduinobot_ws/install/arduinobot_description/share/arduinobot_description/package.xml
+[3.093s] Invoked command in '/home/farr97/arduinobot_ws/build/arduinobot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/farr97/arduinobot_ws/build/arduinobot_description

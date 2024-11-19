@@ -1,0 +1,4 @@
+PLUGIN;lib/libtask_server.so
+arduinobot_remote::TaskServer;lib/libtask_server.so
+EXECUTABLE;lib/libtask_server.so
+task_server_node;lib/libtask_server.so

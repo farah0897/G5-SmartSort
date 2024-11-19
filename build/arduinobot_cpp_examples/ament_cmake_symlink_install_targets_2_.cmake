@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/farr97/arduinobot_ws/build/arduinobot_cpp_examples/libsimple_action_server.so" "/home/farr97/arduinobot_ws/build/arduinobot_cpp_examples/simple_action_client" "TARGETS" "simple_action_server" "simple_action_client" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

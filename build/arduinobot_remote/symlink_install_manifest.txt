@@ -1,0 +1,17 @@
+/home/farr97/arduinobot_ws/install/arduinobot_remote/lib/libtask_server.so
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/ament_index/resource_index/package_run_dependencies/arduinobot_remote
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/ament_index/resource_index/parent_prefix_path/arduinobot_remote
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/environment/ament_prefix_path.sh
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/environment/ament_prefix_path.dsv
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/environment/path.sh
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/environment/path.dsv
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/local_setup.bash
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/local_setup.sh
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/local_setup.zsh
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/local_setup.dsv
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/package.dsv
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/ament_index/resource_index/packages/arduinobot_remote
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/ament_index/resource_index/rclcpp_components/arduinobot_remote
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/cmake/arduinobot_remoteConfig.cmake
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/cmake/arduinobot_remoteConfig-version.cmake
+/home/farr97/arduinobot_ws/install/arduinobot_remote/share/arduinobot_remote/package.xml

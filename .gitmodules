@@ -1,0 +1,3 @@
+[submodule "src/arduinobot_description"]
+	path = src/arduinobot_description
+	url = https://github.com/farah0897/G5-SmartSort/tree/master
