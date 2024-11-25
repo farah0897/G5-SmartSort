@@ -6,7 +6,7 @@
 #include <thread>
 #include <functional>  // Needed for std::placeholders
 
-namespace arduinobot_cpp_exsamples
+namespace arduinobot_cpp
 {
     class SimpleActionServer : public rclcpp::Node
     {
@@ -90,4 +90,4 @@ namespace arduinobot_cpp_exsamples
     };
 }
 
-RCLCPP_COMPONENTS_REGISTER_NODE(arduinobot_cpp_exsamples::SimpleActionServer)
+RCLCPP_COMPONENTS_REGISTER_NODE(arduinobot_cpp::SimpleActionServer)
