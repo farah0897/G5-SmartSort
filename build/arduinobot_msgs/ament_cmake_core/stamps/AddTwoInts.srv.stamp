@@ -1,6 +1,0 @@
-# Request
-int64 first
-int64 second
----
-# Response
-int64 sum
