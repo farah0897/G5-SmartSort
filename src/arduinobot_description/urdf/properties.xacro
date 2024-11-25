@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Constants -->
+    <xacro:property name="PI" value="3.14159"/>
+    <xacro:property name="PI_2" value="${PI/2}"/>
+    <xacro:property name="PI_4" value="${PI/4}"/>
+    
+    <!-- Joint properties -->
+    <xacro:property name="effort" value="30.0"/>
+    <xacro:property name="velocity" value="10.0"/>
+
+    <!-- Mark that properties are included -->
+    <xacro:property name="properties_included" value="1"/>
+</robot> 

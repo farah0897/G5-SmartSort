@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test">
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <material name="grey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+    </material>
+
+    <link name="world"/>
+    
+    <link name="test_box">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <joint name="world_to_box" type="fixed">
+        <parent link="world"/>
+        <child link="test_box"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+
+    <link name="test_mesh">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/arm_1.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+    </link>
+
+    <joint name="world_to_mesh" type="fixed">
+        <parent link="world"/>
+        <child link="test_mesh"/>
+        <origin rpy="0 0 0" xyz="0.2 0 0"/>
+    </joint>
+</robot> 

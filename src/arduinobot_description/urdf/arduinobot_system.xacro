@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot name="arduinobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <!-- Define common properties -->
+    <xacro:property name="PI" value="3.141592653589793"/>
+    <xacro:property name="PI_2" value="${PI / 2.0}"/>
+    <xacro:property name="PI_4" value="${PI / 4.0}"/>
+    <xacro:property name="effort" value="30.0"/>
+    <xacro:property name="velocity" value="10.0"/>
+    
+    <!-- Include the base robot description -->
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot.urdf.xacro"/>
+    
+    <!-- Include the ros2_control elements -->
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_ros2_control.xacro"/>
+    
+    <!-- Include the Gazebo specific elements -->
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro"/>
+
+    
+
+</robot> 
