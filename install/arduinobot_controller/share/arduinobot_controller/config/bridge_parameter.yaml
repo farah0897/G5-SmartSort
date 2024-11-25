@@ -1,1 +1,47 @@
-/home/farr97/arduinobot_ws/src/arduinobot_controller/config/bridge_parameter.yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 10  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - base_link_to_base_plate  
+      - base_plate_to_arm_1
+      - arm_1_to_arm_2
+      - arm_2_to_arm_3
+      - gripper_support_to_inner_circle  
+      
+    command_interfaces:
+      - position
+    
+    state_interfaces:
+      - position
+      
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.0
+      base_link_to_base_plate:
+        trajectory: 0.05
+        goal: 0.03
+      base_plate_to_arm_1:
+        trajectory: 0.05
+        goal: 0.03
+      arm_1_to_arm_2:
+        trajectory: 0.05
+        goal: 0.03
+      arm_2_to_arm_3:
+        trajectory: 0.05
+        goal: 0.03
+      gripper_support_to_inner_circle:
+        trajectory: 0.05
+        goal: 0.03 

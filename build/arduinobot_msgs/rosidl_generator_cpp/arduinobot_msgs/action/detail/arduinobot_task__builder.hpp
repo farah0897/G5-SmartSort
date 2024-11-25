@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:action/ArduinobotTask.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/action/arduinobot_task.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__ACTION__DETAIL__ARDUINOBOT_TASK__BUILDER_HPP_
 #define ARDUINOBOT_MSGS__ACTION__DETAIL__ARDUINOBOT_TASK__BUILDER_HPP_
 
@@ -330,80 +327,6 @@ namespace action
 namespace builder
 {
 
-class Init_ArduinobotTask_SendGoal_Event_response
-{
-public:
-  explicit Init_ArduinobotTask_SendGoal_Event_response(::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event & msg)
-  : msg_(msg)
-  {}
-  ::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event response(::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event::_response_type arg)
-  {
-    msg_.response = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event msg_;
-};
-
-class Init_ArduinobotTask_SendGoal_Event_request
-{
-public:
-  explicit Init_ArduinobotTask_SendGoal_Event_request(::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event & msg)
-  : msg_(msg)
-  {}
-  Init_ArduinobotTask_SendGoal_Event_response request(::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event::_request_type arg)
-  {
-    msg_.request = std::move(arg);
-    return Init_ArduinobotTask_SendGoal_Event_response(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event msg_;
-};
-
-class Init_ArduinobotTask_SendGoal_Event_info
-{
-public:
-  Init_ArduinobotTask_SendGoal_Event_info()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_ArduinobotTask_SendGoal_Event_request info(::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event::_info_type arg)
-  {
-    msg_.info = std::move(arg);
-    return Init_ArduinobotTask_SendGoal_Event_request(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event msg_;
-};
-
-}  // namespace builder
-
-}  // namespace action
-
-template<typename MessageType>
-auto build();
-
-template<>
-inline
-auto build<::arduinobot_msgs::action::ArduinobotTask_SendGoal_Event>()
-{
-  return arduinobot_msgs::action::builder::Init_ArduinobotTask_SendGoal_Event_info();
-}
-
-}  // namespace arduinobot_msgs
-
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-namespace builder
-{
-
 class Init_ArduinobotTask_GetResult_Request_goal_id
 {
 public:
@@ -490,80 +413,6 @@ inline
 auto build<::arduinobot_msgs::action::ArduinobotTask_GetResult_Response>()
 {
   return arduinobot_msgs::action::builder::Init_ArduinobotTask_GetResult_Response_status();
-}
-
-}  // namespace arduinobot_msgs
-
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-namespace builder
-{
-
-class Init_ArduinobotTask_GetResult_Event_response
-{
-public:
-  explicit Init_ArduinobotTask_GetResult_Event_response(::arduinobot_msgs::action::ArduinobotTask_GetResult_Event & msg)
-  : msg_(msg)
-  {}
-  ::arduinobot_msgs::action::ArduinobotTask_GetResult_Event response(::arduinobot_msgs::action::ArduinobotTask_GetResult_Event::_response_type arg)
-  {
-    msg_.response = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_GetResult_Event msg_;
-};
-
-class Init_ArduinobotTask_GetResult_Event_request
-{
-public:
-  explicit Init_ArduinobotTask_GetResult_Event_request(::arduinobot_msgs::action::ArduinobotTask_GetResult_Event & msg)
-  : msg_(msg)
-  {}
-  Init_ArduinobotTask_GetResult_Event_response request(::arduinobot_msgs::action::ArduinobotTask_GetResult_Event::_request_type arg)
-  {
-    msg_.request = std::move(arg);
-    return Init_ArduinobotTask_GetResult_Event_response(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_GetResult_Event msg_;
-};
-
-class Init_ArduinobotTask_GetResult_Event_info
-{
-public:
-  Init_ArduinobotTask_GetResult_Event_info()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_ArduinobotTask_GetResult_Event_request info(::arduinobot_msgs::action::ArduinobotTask_GetResult_Event::_info_type arg)
-  {
-    msg_.info = std::move(arg);
-    return Init_ArduinobotTask_GetResult_Event_request(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::ArduinobotTask_GetResult_Event msg_;
-};
-
-}  // namespace builder
-
-}  // namespace action
-
-template<typename MessageType>
-auto build();
-
-template<>
-inline
-auto build<::arduinobot_msgs::action::ArduinobotTask_GetResult_Event>()
-{
-  return arduinobot_msgs::action::builder::Init_ArduinobotTask_GetResult_Event_info();
 }
 
 }  // namespace arduinobot_msgs

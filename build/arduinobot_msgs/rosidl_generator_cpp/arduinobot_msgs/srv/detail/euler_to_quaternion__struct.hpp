@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:srv/EulerToQuaternion.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/srv/euler_to_quaternion.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__SRV__DETAIL__EULER_TO_QUATERNION__STRUCT_HPP_
 #define ARDUINOBOT_MSGS__SRV__DETAIL__EULER_TO_QUATERNION__STRUCT_HPP_
 
@@ -315,141 +312,6 @@ using EulerToQuaternion_Response =
 
 }  // namespace arduinobot_msgs
 
-
-// Include directives for member types
-// Member 'info'
-#include "service_msgs/msg/detail/service_event_info__struct.hpp"
-
-#ifndef _WIN32
-# define DEPRECATED__arduinobot_msgs__srv__EulerToQuaternion_Event __attribute__((deprecated))
-#else
-# define DEPRECATED__arduinobot_msgs__srv__EulerToQuaternion_Event __declspec(deprecated)
-#endif
-
-namespace arduinobot_msgs
-{
-
-namespace srv
-{
-
-// message struct
-template<class ContainerAllocator>
-struct EulerToQuaternion_Event_
-{
-  using Type = EulerToQuaternion_Event_<ContainerAllocator>;
-
-  explicit EulerToQuaternion_Event_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : info(_init)
-  {
-    (void)_init;
-  }
-
-  explicit EulerToQuaternion_Event_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : info(_alloc, _init)
-  {
-    (void)_init;
-  }
-
-  // field types and members
-  using _info_type =
-    service_msgs::msg::ServiceEventInfo_<ContainerAllocator>;
-  _info_type info;
-  using _request_type =
-    rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::EulerToQuaternion_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::EulerToQuaternion_Request_<ContainerAllocator>>>;
-  _request_type request;
-  using _response_type =
-    rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::EulerToQuaternion_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::EulerToQuaternion_Response_<ContainerAllocator>>>;
-  _response_type response;
-
-  // setters for named parameter idiom
-  Type & set__info(
-    const service_msgs::msg::ServiceEventInfo_<ContainerAllocator> & _arg)
-  {
-    this->info = _arg;
-    return *this;
-  }
-  Type & set__request(
-    const rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::EulerToQuaternion_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::EulerToQuaternion_Request_<ContainerAllocator>>> & _arg)
-  {
-    this->request = _arg;
-    return *this;
-  }
-  Type & set__response(
-    const rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::EulerToQuaternion_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::EulerToQuaternion_Response_<ContainerAllocator>>> & _arg)
-  {
-    this->response = _arg;
-    return *this;
-  }
-
-  // constant declarations
-
-  // pointer types
-  using RawPtr =
-    arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> *;
-  using ConstRawPtr =
-    const arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> *;
-  using SharedPtr =
-    std::shared_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>>;
-  using ConstSharedPtr =
-    std::shared_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> const>;
-
-  template<typename Deleter = std::default_delete<
-      arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>>>
-  using UniquePtrWithDeleter =
-    std::unique_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>, Deleter>;
-
-  using UniquePtr = UniquePtrWithDeleter<>;
-
-  template<typename Deleter = std::default_delete<
-      arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>>>
-  using ConstUniquePtrWithDeleter =
-    std::unique_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> const, Deleter>;
-  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
-
-  using WeakPtr =
-    std::weak_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>>;
-  using ConstWeakPtr =
-    std::weak_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> const>;
-
-  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
-  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
-  typedef DEPRECATED__arduinobot_msgs__srv__EulerToQuaternion_Event
-    std::shared_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator>>
-    Ptr;
-  typedef DEPRECATED__arduinobot_msgs__srv__EulerToQuaternion_Event
-    std::shared_ptr<arduinobot_msgs::srv::EulerToQuaternion_Event_<ContainerAllocator> const>
-    ConstPtr;
-
-  // comparison operators
-  bool operator==(const EulerToQuaternion_Event_ & other) const
-  {
-    if (this->info != other.info) {
-      return false;
-    }
-    if (this->request != other.request) {
-      return false;
-    }
-    if (this->response != other.response) {
-      return false;
-    }
-    return true;
-  }
-  bool operator!=(const EulerToQuaternion_Event_ & other) const
-  {
-    return !this->operator==(other);
-  }
-};  // struct EulerToQuaternion_Event_
-
-// alias to use template instance with default allocator
-using EulerToQuaternion_Event =
-  arduinobot_msgs::srv::EulerToQuaternion_Event_<std::allocator<void>>;
-
-// constant definitions
-
-}  // namespace srv
-
-}  // namespace arduinobot_msgs
-
 namespace arduinobot_msgs
 {
 
@@ -460,7 +322,6 @@ struct EulerToQuaternion
 {
   using Request = arduinobot_msgs::srv::EulerToQuaternion_Request;
   using Response = arduinobot_msgs::srv::EulerToQuaternion_Response;
-  using Event = arduinobot_msgs::srv::EulerToQuaternion_Event;
 };
 
 }  // namespace srv

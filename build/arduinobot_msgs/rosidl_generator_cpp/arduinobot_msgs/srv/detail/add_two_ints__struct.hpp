@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:srv/AddTwoInts.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/srv/add_two_ints.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__SRV__DETAIL__ADD_TWO_INTS__STRUCT_HPP_
 #define ARDUINOBOT_MSGS__SRV__DETAIL__ADD_TWO_INTS__STRUCT_HPP_
 
@@ -41,8 +38,8 @@ struct AddTwoInts_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->a = 0ll;
-      this->b = 0ll;
+      this->first = 0ll;
+      this->second = 0ll;
     }
   }
 
@@ -52,30 +49,30 @@ struct AddTwoInts_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->a = 0ll;
-      this->b = 0ll;
+      this->first = 0ll;
+      this->second = 0ll;
     }
   }
 
   // field types and members
-  using _a_type =
+  using _first_type =
     int64_t;
-  _a_type a;
-  using _b_type =
+  _first_type first;
+  using _second_type =
     int64_t;
-  _b_type b;
+  _second_type second;
 
   // setters for named parameter idiom
-  Type & set__a(
+  Type & set__first(
     const int64_t & _arg)
   {
-    this->a = _arg;
+    this->first = _arg;
     return *this;
   }
-  Type & set__b(
+  Type & set__second(
     const int64_t & _arg)
   {
-    this->b = _arg;
+    this->second = _arg;
     return *this;
   }
 
@@ -121,10 +118,10 @@ struct AddTwoInts_Request_
   // comparison operators
   bool operator==(const AddTwoInts_Request_ & other) const
   {
-    if (this->a != other.a) {
+    if (this->first != other.first) {
       return false;
     }
-    if (this->b != other.b) {
+    if (this->second != other.second) {
       return false;
     }
     return true;
@@ -259,141 +256,6 @@ using AddTwoInts_Response =
 
 }  // namespace arduinobot_msgs
 
-
-// Include directives for member types
-// Member 'info'
-#include "service_msgs/msg/detail/service_event_info__struct.hpp"
-
-#ifndef _WIN32
-# define DEPRECATED__arduinobot_msgs__srv__AddTwoInts_Event __attribute__((deprecated))
-#else
-# define DEPRECATED__arduinobot_msgs__srv__AddTwoInts_Event __declspec(deprecated)
-#endif
-
-namespace arduinobot_msgs
-{
-
-namespace srv
-{
-
-// message struct
-template<class ContainerAllocator>
-struct AddTwoInts_Event_
-{
-  using Type = AddTwoInts_Event_<ContainerAllocator>;
-
-  explicit AddTwoInts_Event_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : info(_init)
-  {
-    (void)_init;
-  }
-
-  explicit AddTwoInts_Event_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : info(_alloc, _init)
-  {
-    (void)_init;
-  }
-
-  // field types and members
-  using _info_type =
-    service_msgs::msg::ServiceEventInfo_<ContainerAllocator>;
-  _info_type info;
-  using _request_type =
-    rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::AddTwoInts_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::AddTwoInts_Request_<ContainerAllocator>>>;
-  _request_type request;
-  using _response_type =
-    rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::AddTwoInts_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::AddTwoInts_Response_<ContainerAllocator>>>;
-  _response_type response;
-
-  // setters for named parameter idiom
-  Type & set__info(
-    const service_msgs::msg::ServiceEventInfo_<ContainerAllocator> & _arg)
-  {
-    this->info = _arg;
-    return *this;
-  }
-  Type & set__request(
-    const rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::AddTwoInts_Request_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::AddTwoInts_Request_<ContainerAllocator>>> & _arg)
-  {
-    this->request = _arg;
-    return *this;
-  }
-  Type & set__response(
-    const rosidl_runtime_cpp::BoundedVector<arduinobot_msgs::srv::AddTwoInts_Response_<ContainerAllocator>, 1, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<arduinobot_msgs::srv::AddTwoInts_Response_<ContainerAllocator>>> & _arg)
-  {
-    this->response = _arg;
-    return *this;
-  }
-
-  // constant declarations
-
-  // pointer types
-  using RawPtr =
-    arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> *;
-  using ConstRawPtr =
-    const arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> *;
-  using SharedPtr =
-    std::shared_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>>;
-  using ConstSharedPtr =
-    std::shared_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> const>;
-
-  template<typename Deleter = std::default_delete<
-      arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>>>
-  using UniquePtrWithDeleter =
-    std::unique_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>, Deleter>;
-
-  using UniquePtr = UniquePtrWithDeleter<>;
-
-  template<typename Deleter = std::default_delete<
-      arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>>>
-  using ConstUniquePtrWithDeleter =
-    std::unique_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> const, Deleter>;
-  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
-
-  using WeakPtr =
-    std::weak_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>>;
-  using ConstWeakPtr =
-    std::weak_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> const>;
-
-  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
-  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
-  typedef DEPRECATED__arduinobot_msgs__srv__AddTwoInts_Event
-    std::shared_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator>>
-    Ptr;
-  typedef DEPRECATED__arduinobot_msgs__srv__AddTwoInts_Event
-    std::shared_ptr<arduinobot_msgs::srv::AddTwoInts_Event_<ContainerAllocator> const>
-    ConstPtr;
-
-  // comparison operators
-  bool operator==(const AddTwoInts_Event_ & other) const
-  {
-    if (this->info != other.info) {
-      return false;
-    }
-    if (this->request != other.request) {
-      return false;
-    }
-    if (this->response != other.response) {
-      return false;
-    }
-    return true;
-  }
-  bool operator!=(const AddTwoInts_Event_ & other) const
-  {
-    return !this->operator==(other);
-  }
-};  // struct AddTwoInts_Event_
-
-// alias to use template instance with default allocator
-using AddTwoInts_Event =
-  arduinobot_msgs::srv::AddTwoInts_Event_<std::allocator<void>>;
-
-// constant definitions
-
-}  // namespace srv
-
-}  // namespace arduinobot_msgs
-
 namespace arduinobot_msgs
 {
 
@@ -404,7 +266,6 @@ struct AddTwoInts
 {
   using Request = arduinobot_msgs::srv::AddTwoInts_Request;
   using Response = arduinobot_msgs::srv::AddTwoInts_Response;
-  using Event = arduinobot_msgs::srv::AddTwoInts_Event;
 };
 
 }  // namespace srv

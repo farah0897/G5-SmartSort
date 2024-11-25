@@ -7,6 +7,5 @@
 #include "arduinobot_msgs/srv/detail/add_two_ints__struct.hpp"
 #include "arduinobot_msgs/srv/detail/add_two_ints__builder.hpp"
 #include "arduinobot_msgs/srv/detail/add_two_ints__traits.hpp"
-#include "arduinobot_msgs/srv/detail/add_two_ints__type_support.hpp"
 
 #endif  // ARDUINOBOT_MSGS__SRV__ADD_TWO_INTS_HPP_

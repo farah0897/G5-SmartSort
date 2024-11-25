@@ -1,1 +1,1 @@
-/home/farr97/arduinobot_ws/build/arduinobot_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/arduinobot_controller
+libserial-dev;hardware_interface;pluginlib;rclcpp;rclcpp_lifecycle;ros2launch;robot_state_publisher;controller_manager;xacro;ament_lint_auto;ament_lint_common

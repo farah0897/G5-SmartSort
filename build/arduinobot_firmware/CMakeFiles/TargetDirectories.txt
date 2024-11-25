@@ -1,6 +1,7 @@
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/uninstall.dir
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/arduinobot_firmware_uninstall.dir
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/serial_transmitter.dir
+/home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/serial_receiver.dir
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/test.dir
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/edit_cache.dir
 /home/farr97/arduinobot_ws/build/arduinobot_firmware/CMakeFiles/rebuild_cache.dir

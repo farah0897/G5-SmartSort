@@ -7,6 +7,5 @@
 #include "arduinobot_msgs/srv/detail/quaternion_to_euler__struct.hpp"
 #include "arduinobot_msgs/srv/detail/quaternion_to_euler__builder.hpp"
 #include "arduinobot_msgs/srv/detail/quaternion_to_euler__traits.hpp"
-#include "arduinobot_msgs/srv/detail/quaternion_to_euler__type_support.hpp"
 
 #endif  // ARDUINOBOT_MSGS__SRV__QUATERNION_TO_EULER_HPP_

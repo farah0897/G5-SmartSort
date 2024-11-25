@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:action/Fibonacci.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/action/fibonacci.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__ACTION__DETAIL__FIBONACCI__BUILDER_HPP_
 #define ARDUINOBOT_MSGS__ACTION__DETAIL__FIBONACCI__BUILDER_HPP_
 
@@ -66,15 +63,15 @@ namespace action
 namespace builder
 {
 
-class Init_Fibonacci_Result_sequence
+class Init_Fibonacci_Result_partial_sequence
 {
 public:
-  Init_Fibonacci_Result_sequence()
+  Init_Fibonacci_Result_partial_sequence()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::arduinobot_msgs::action::Fibonacci_Result sequence(::arduinobot_msgs::action::Fibonacci_Result::_sequence_type arg)
+  ::arduinobot_msgs::action::Fibonacci_Result partial_sequence(::arduinobot_msgs::action::Fibonacci_Result::_partial_sequence_type arg)
   {
-    msg_.sequence = std::move(arg);
+    msg_.partial_sequence = std::move(arg);
     return std::move(msg_);
   }
 
@@ -93,7 +90,7 @@ template<>
 inline
 auto build<::arduinobot_msgs::action::Fibonacci_Result>()
 {
-  return arduinobot_msgs::action::builder::Init_Fibonacci_Result_sequence();
+  return arduinobot_msgs::action::builder::Init_Fibonacci_Result_partial_sequence();
 }
 
 }  // namespace arduinobot_msgs
@@ -108,15 +105,15 @@ namespace action
 namespace builder
 {
 
-class Init_Fibonacci_Feedback_sequence
+class Init_Fibonacci_Feedback_partial_sequence
 {
 public:
-  Init_Fibonacci_Feedback_sequence()
+  Init_Fibonacci_Feedback_partial_sequence()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::arduinobot_msgs::action::Fibonacci_Feedback sequence(::arduinobot_msgs::action::Fibonacci_Feedback::_sequence_type arg)
+  ::arduinobot_msgs::action::Fibonacci_Feedback partial_sequence(::arduinobot_msgs::action::Fibonacci_Feedback::_partial_sequence_type arg)
   {
-    msg_.sequence = std::move(arg);
+    msg_.partial_sequence = std::move(arg);
     return std::move(msg_);
   }
 
@@ -135,7 +132,7 @@ template<>
 inline
 auto build<::arduinobot_msgs::action::Fibonacci_Feedback>()
 {
-  return arduinobot_msgs::action::builder::Init_Fibonacci_Feedback_sequence();
+  return arduinobot_msgs::action::builder::Init_Fibonacci_Feedback_partial_sequence();
 }
 
 }  // namespace arduinobot_msgs
@@ -266,80 +263,6 @@ namespace action
 namespace builder
 {
 
-class Init_Fibonacci_SendGoal_Event_response
-{
-public:
-  explicit Init_Fibonacci_SendGoal_Event_response(::arduinobot_msgs::action::Fibonacci_SendGoal_Event & msg)
-  : msg_(msg)
-  {}
-  ::arduinobot_msgs::action::Fibonacci_SendGoal_Event response(::arduinobot_msgs::action::Fibonacci_SendGoal_Event::_response_type arg)
-  {
-    msg_.response = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_SendGoal_Event msg_;
-};
-
-class Init_Fibonacci_SendGoal_Event_request
-{
-public:
-  explicit Init_Fibonacci_SendGoal_Event_request(::arduinobot_msgs::action::Fibonacci_SendGoal_Event & msg)
-  : msg_(msg)
-  {}
-  Init_Fibonacci_SendGoal_Event_response request(::arduinobot_msgs::action::Fibonacci_SendGoal_Event::_request_type arg)
-  {
-    msg_.request = std::move(arg);
-    return Init_Fibonacci_SendGoal_Event_response(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_SendGoal_Event msg_;
-};
-
-class Init_Fibonacci_SendGoal_Event_info
-{
-public:
-  Init_Fibonacci_SendGoal_Event_info()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_Fibonacci_SendGoal_Event_request info(::arduinobot_msgs::action::Fibonacci_SendGoal_Event::_info_type arg)
-  {
-    msg_.info = std::move(arg);
-    return Init_Fibonacci_SendGoal_Event_request(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_SendGoal_Event msg_;
-};
-
-}  // namespace builder
-
-}  // namespace action
-
-template<typename MessageType>
-auto build();
-
-template<>
-inline
-auto build<::arduinobot_msgs::action::Fibonacci_SendGoal_Event>()
-{
-  return arduinobot_msgs::action::builder::Init_Fibonacci_SendGoal_Event_info();
-}
-
-}  // namespace arduinobot_msgs
-
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-namespace builder
-{
-
 class Init_Fibonacci_GetResult_Request_goal_id
 {
 public:
@@ -426,80 +349,6 @@ inline
 auto build<::arduinobot_msgs::action::Fibonacci_GetResult_Response>()
 {
   return arduinobot_msgs::action::builder::Init_Fibonacci_GetResult_Response_status();
-}
-
-}  // namespace arduinobot_msgs
-
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-namespace builder
-{
-
-class Init_Fibonacci_GetResult_Event_response
-{
-public:
-  explicit Init_Fibonacci_GetResult_Event_response(::arduinobot_msgs::action::Fibonacci_GetResult_Event & msg)
-  : msg_(msg)
-  {}
-  ::arduinobot_msgs::action::Fibonacci_GetResult_Event response(::arduinobot_msgs::action::Fibonacci_GetResult_Event::_response_type arg)
-  {
-    msg_.response = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_GetResult_Event msg_;
-};
-
-class Init_Fibonacci_GetResult_Event_request
-{
-public:
-  explicit Init_Fibonacci_GetResult_Event_request(::arduinobot_msgs::action::Fibonacci_GetResult_Event & msg)
-  : msg_(msg)
-  {}
-  Init_Fibonacci_GetResult_Event_response request(::arduinobot_msgs::action::Fibonacci_GetResult_Event::_request_type arg)
-  {
-    msg_.request = std::move(arg);
-    return Init_Fibonacci_GetResult_Event_response(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_GetResult_Event msg_;
-};
-
-class Init_Fibonacci_GetResult_Event_info
-{
-public:
-  Init_Fibonacci_GetResult_Event_info()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_Fibonacci_GetResult_Event_request info(::arduinobot_msgs::action::Fibonacci_GetResult_Event::_info_type arg)
-  {
-    msg_.info = std::move(arg);
-    return Init_Fibonacci_GetResult_Event_request(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::action::Fibonacci_GetResult_Event msg_;
-};
-
-}  // namespace builder
-
-}  // namespace action
-
-template<typename MessageType>
-auto build();
-
-template<>
-inline
-auto build<::arduinobot_msgs::action::Fibonacci_GetResult_Event>()
-{
-  return arduinobot_msgs::action::builder::Init_Fibonacci_GetResult_Event_info();
 }
 
 }  // namespace arduinobot_msgs

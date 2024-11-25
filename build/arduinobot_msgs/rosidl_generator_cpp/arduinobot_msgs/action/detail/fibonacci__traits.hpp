@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:action/Fibonacci.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/action/fibonacci.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__ACTION__DETAIL__FIBONACCI__TRAITS_HPP_
 #define ARDUINOBOT_MSGS__ACTION__DETAIL__FIBONACCI__TRAITS_HPP_
 
@@ -120,14 +117,14 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: sequence
+  // member: partial_sequence
   {
-    if (msg.sequence.size() == 0) {
-      out << "sequence: []";
+    if (msg.partial_sequence.size() == 0) {
+      out << "partial_sequence: []";
     } else {
-      out << "sequence: [";
-      size_t pending_items = msg.sequence.size();
-      for (auto item : msg.sequence) {
+      out << "partial_sequence: [";
+      size_t pending_items = msg.partial_sequence.size();
+      for (auto item : msg.partial_sequence) {
         rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -143,16 +140,16 @@ inline void to_block_style_yaml(
   const Fibonacci_Result & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: sequence
+  // member: partial_sequence
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.sequence.size() == 0) {
-      out << "sequence: []\n";
+    if (msg.partial_sequence.size() == 0) {
+      out << "partial_sequence: []\n";
     } else {
-      out << "sequence:\n";
-      for (auto item : msg.sequence) {
+      out << "partial_sequence:\n";
+      for (auto item : msg.partial_sequence) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
@@ -233,14 +230,14 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: sequence
+  // member: partial_sequence
   {
-    if (msg.sequence.size() == 0) {
-      out << "sequence: []";
+    if (msg.partial_sequence.size() == 0) {
+      out << "partial_sequence: []";
     } else {
-      out << "sequence: [";
-      size_t pending_items = msg.sequence.size();
-      for (auto item : msg.sequence) {
+      out << "partial_sequence: [";
+      size_t pending_items = msg.partial_sequence.size();
+      for (auto item : msg.partial_sequence) {
         rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -256,16 +253,16 @@ inline void to_block_style_yaml(
   const Fibonacci_Feedback & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: sequence
+  // member: partial_sequence
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.sequence.size() == 0) {
-      out << "sequence: []\n";
+    if (msg.partial_sequence.size() == 0) {
+      out << "partial_sequence: []\n";
     } else {
-      out << "sequence:\n";
-      for (auto item : msg.sequence) {
+      out << "partial_sequence:\n";
+      for (auto item : msg.partial_sequence) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
@@ -560,175 +557,6 @@ struct is_message<arduinobot_msgs::action::Fibonacci_SendGoal_Response>
 
 }  // namespace rosidl_generator_traits
 
-// Include directives for member types
-// Member 'info'
-#include "service_msgs/msg/detail/service_event_info__traits.hpp"
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-inline void to_flow_style_yaml(
-  const Fibonacci_SendGoal_Event & msg,
-  std::ostream & out)
-{
-  out << "{";
-  // member: info
-  {
-    out << "info: ";
-    to_flow_style_yaml(msg.info, out);
-    out << ", ";
-  }
-
-  // member: request
-  {
-    if (msg.request.size() == 0) {
-      out << "request: []";
-    } else {
-      out << "request: [";
-      size_t pending_items = msg.request.size();
-      for (auto item : msg.request) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: response
-  {
-    if (msg.response.size() == 0) {
-      out << "response: []";
-    } else {
-      out << "response: [";
-      size_t pending_items = msg.response.size();
-      for (auto item : msg.response) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-  }
-  out << "}";
-}  // NOLINT(readability/fn_size)
-
-inline void to_block_style_yaml(
-  const Fibonacci_SendGoal_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  // member: info
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "info:\n";
-    to_block_style_yaml(msg.info, out, indentation + 2);
-  }
-
-  // member: request
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.request.size() == 0) {
-      out << "request: []\n";
-    } else {
-      out << "request:\n";
-      for (auto item : msg.request) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: response
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.response.size() == 0) {
-      out << "response: []\n";
-    } else {
-      out << "response:\n";
-      for (auto item : msg.response) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-}  // NOLINT(readability/fn_size)
-
-inline std::string to_yaml(const Fibonacci_SendGoal_Event & msg, bool use_flow_style = false)
-{
-  std::ostringstream out;
-  if (use_flow_style) {
-    to_flow_style_yaml(msg, out);
-  } else {
-    to_block_style_yaml(msg, out);
-  }
-  return out.str();
-}
-
-}  // namespace action
-
-}  // namespace arduinobot_msgs
-
-namespace rosidl_generator_traits
-{
-
-[[deprecated("use arduinobot_msgs::action::to_block_style_yaml() instead")]]
-inline void to_yaml(
-  const arduinobot_msgs::action::Fibonacci_SendGoal_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  arduinobot_msgs::action::to_block_style_yaml(msg, out, indentation);
-}
-
-[[deprecated("use arduinobot_msgs::action::to_yaml() instead")]]
-inline std::string to_yaml(const arduinobot_msgs::action::Fibonacci_SendGoal_Event & msg)
-{
-  return arduinobot_msgs::action::to_yaml(msg);
-}
-
-template<>
-inline const char * data_type<arduinobot_msgs::action::Fibonacci_SendGoal_Event>()
-{
-  return "arduinobot_msgs::action::Fibonacci_SendGoal_Event";
-}
-
-template<>
-inline const char * name<arduinobot_msgs::action::Fibonacci_SendGoal_Event>()
-{
-  return "arduinobot_msgs/action/Fibonacci_SendGoal_Event";
-}
-
-template<>
-struct has_fixed_size<arduinobot_msgs::action::Fibonacci_SendGoal_Event>
-  : std::integral_constant<bool, false> {};
-
-template<>
-struct has_bounded_size<arduinobot_msgs::action::Fibonacci_SendGoal_Event>
-  : std::integral_constant<bool, has_bounded_size<arduinobot_msgs::action::Fibonacci_SendGoal_Request>::value && has_bounded_size<arduinobot_msgs::action::Fibonacci_SendGoal_Response>::value && has_bounded_size<service_msgs::msg::ServiceEventInfo>::value> {};
-
-template<>
-struct is_message<arduinobot_msgs::action::Fibonacci_SendGoal_Event>
-  : std::true_type {};
-
-}  // namespace rosidl_generator_traits
-
 namespace rosidl_generator_traits
 {
 
@@ -989,176 +817,6 @@ struct has_bounded_size<arduinobot_msgs::action::Fibonacci_GetResult_Response>
 
 template<>
 struct is_message<arduinobot_msgs::action::Fibonacci_GetResult_Response>
-  : std::true_type {};
-
-}  // namespace rosidl_generator_traits
-
-// Include directives for member types
-// Member 'info'
-// already included above
-// #include "service_msgs/msg/detail/service_event_info__traits.hpp"
-
-namespace arduinobot_msgs
-{
-
-namespace action
-{
-
-inline void to_flow_style_yaml(
-  const Fibonacci_GetResult_Event & msg,
-  std::ostream & out)
-{
-  out << "{";
-  // member: info
-  {
-    out << "info: ";
-    to_flow_style_yaml(msg.info, out);
-    out << ", ";
-  }
-
-  // member: request
-  {
-    if (msg.request.size() == 0) {
-      out << "request: []";
-    } else {
-      out << "request: [";
-      size_t pending_items = msg.request.size();
-      for (auto item : msg.request) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: response
-  {
-    if (msg.response.size() == 0) {
-      out << "response: []";
-    } else {
-      out << "response: [";
-      size_t pending_items = msg.response.size();
-      for (auto item : msg.response) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-  }
-  out << "}";
-}  // NOLINT(readability/fn_size)
-
-inline void to_block_style_yaml(
-  const Fibonacci_GetResult_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  // member: info
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "info:\n";
-    to_block_style_yaml(msg.info, out, indentation + 2);
-  }
-
-  // member: request
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.request.size() == 0) {
-      out << "request: []\n";
-    } else {
-      out << "request:\n";
-      for (auto item : msg.request) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: response
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.response.size() == 0) {
-      out << "response: []\n";
-    } else {
-      out << "response:\n";
-      for (auto item : msg.response) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-}  // NOLINT(readability/fn_size)
-
-inline std::string to_yaml(const Fibonacci_GetResult_Event & msg, bool use_flow_style = false)
-{
-  std::ostringstream out;
-  if (use_flow_style) {
-    to_flow_style_yaml(msg, out);
-  } else {
-    to_block_style_yaml(msg, out);
-  }
-  return out.str();
-}
-
-}  // namespace action
-
-}  // namespace arduinobot_msgs
-
-namespace rosidl_generator_traits
-{
-
-[[deprecated("use arduinobot_msgs::action::to_block_style_yaml() instead")]]
-inline void to_yaml(
-  const arduinobot_msgs::action::Fibonacci_GetResult_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  arduinobot_msgs::action::to_block_style_yaml(msg, out, indentation);
-}
-
-[[deprecated("use arduinobot_msgs::action::to_yaml() instead")]]
-inline std::string to_yaml(const arduinobot_msgs::action::Fibonacci_GetResult_Event & msg)
-{
-  return arduinobot_msgs::action::to_yaml(msg);
-}
-
-template<>
-inline const char * data_type<arduinobot_msgs::action::Fibonacci_GetResult_Event>()
-{
-  return "arduinobot_msgs::action::Fibonacci_GetResult_Event";
-}
-
-template<>
-inline const char * name<arduinobot_msgs::action::Fibonacci_GetResult_Event>()
-{
-  return "arduinobot_msgs/action/Fibonacci_GetResult_Event";
-}
-
-template<>
-struct has_fixed_size<arduinobot_msgs::action::Fibonacci_GetResult_Event>
-  : std::integral_constant<bool, false> {};
-
-template<>
-struct has_bounded_size<arduinobot_msgs::action::Fibonacci_GetResult_Event>
-  : std::integral_constant<bool, has_bounded_size<arduinobot_msgs::action::Fibonacci_GetResult_Request>::value && has_bounded_size<arduinobot_msgs::action::Fibonacci_GetResult_Response>::value && has_bounded_size<service_msgs::msg::ServiceEventInfo>::value> {};
-
-template<>
-struct is_message<arduinobot_msgs::action::Fibonacci_GetResult_Event>
   : std::true_type {};
 
 }  // namespace rosidl_generator_traits

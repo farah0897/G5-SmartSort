@@ -13,12 +13,12 @@ module arduinobot_msgs {
     @verbatim (language="comment", text=
       "Result")
     struct Fibonacci_Result {
-      sequence<int32> sequence;
+      sequence<int32> partial_sequence;
     };
     @verbatim (language="comment", text=
       "Feedback")
     struct Fibonacci_Feedback {
-      sequence<int32> sequence;
+      sequence<int32> partial_sequence;
     };
   };
 };

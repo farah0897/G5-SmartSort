@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:srv/AddTwoInts.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/srv/add_two_ints.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__SRV__DETAIL__ADD_TWO_INTS__TRAITS_HPP_
 #define ARDUINOBOT_MSGS__SRV__DETAIL__ADD_TWO_INTS__TRAITS_HPP_
 
@@ -28,17 +25,17 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: a
+  // member: first
   {
-    out << "a: ";
-    rosidl_generator_traits::value_to_yaml(msg.a, out);
+    out << "first: ";
+    rosidl_generator_traits::value_to_yaml(msg.first, out);
     out << ", ";
   }
 
-  // member: b
+  // member: second
   {
-    out << "b: ";
-    rosidl_generator_traits::value_to_yaml(msg.b, out);
+    out << "second: ";
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -47,23 +44,23 @@ inline void to_block_style_yaml(
   const AddTwoInts_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: a
+  // member: first
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "a: ";
-    rosidl_generator_traits::value_to_yaml(msg.a, out);
+    out << "first: ";
+    rosidl_generator_traits::value_to_yaml(msg.first, out);
     out << "\n";
   }
 
-  // member: b
+  // member: second
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "b: ";
-    rosidl_generator_traits::value_to_yaml(msg.b, out);
+    out << "second: ";
+    rosidl_generator_traits::value_to_yaml(msg.second, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -214,175 +211,6 @@ struct has_bounded_size<arduinobot_msgs::srv::AddTwoInts_Response>
 
 template<>
 struct is_message<arduinobot_msgs::srv::AddTwoInts_Response>
-  : std::true_type {};
-
-}  // namespace rosidl_generator_traits
-
-// Include directives for member types
-// Member 'info'
-#include "service_msgs/msg/detail/service_event_info__traits.hpp"
-
-namespace arduinobot_msgs
-{
-
-namespace srv
-{
-
-inline void to_flow_style_yaml(
-  const AddTwoInts_Event & msg,
-  std::ostream & out)
-{
-  out << "{";
-  // member: info
-  {
-    out << "info: ";
-    to_flow_style_yaml(msg.info, out);
-    out << ", ";
-  }
-
-  // member: request
-  {
-    if (msg.request.size() == 0) {
-      out << "request: []";
-    } else {
-      out << "request: [";
-      size_t pending_items = msg.request.size();
-      for (auto item : msg.request) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: response
-  {
-    if (msg.response.size() == 0) {
-      out << "response: []";
-    } else {
-      out << "response: [";
-      size_t pending_items = msg.response.size();
-      for (auto item : msg.response) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-  }
-  out << "}";
-}  // NOLINT(readability/fn_size)
-
-inline void to_block_style_yaml(
-  const AddTwoInts_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  // member: info
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "info:\n";
-    to_block_style_yaml(msg.info, out, indentation + 2);
-  }
-
-  // member: request
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.request.size() == 0) {
-      out << "request: []\n";
-    } else {
-      out << "request:\n";
-      for (auto item : msg.request) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: response
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.response.size() == 0) {
-      out << "response: []\n";
-    } else {
-      out << "response:\n";
-      for (auto item : msg.response) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-}  // NOLINT(readability/fn_size)
-
-inline std::string to_yaml(const AddTwoInts_Event & msg, bool use_flow_style = false)
-{
-  std::ostringstream out;
-  if (use_flow_style) {
-    to_flow_style_yaml(msg, out);
-  } else {
-    to_block_style_yaml(msg, out);
-  }
-  return out.str();
-}
-
-}  // namespace srv
-
-}  // namespace arduinobot_msgs
-
-namespace rosidl_generator_traits
-{
-
-[[deprecated("use arduinobot_msgs::srv::to_block_style_yaml() instead")]]
-inline void to_yaml(
-  const arduinobot_msgs::srv::AddTwoInts_Event & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  arduinobot_msgs::srv::to_block_style_yaml(msg, out, indentation);
-}
-
-[[deprecated("use arduinobot_msgs::srv::to_yaml() instead")]]
-inline std::string to_yaml(const arduinobot_msgs::srv::AddTwoInts_Event & msg)
-{
-  return arduinobot_msgs::srv::to_yaml(msg);
-}
-
-template<>
-inline const char * data_type<arduinobot_msgs::srv::AddTwoInts_Event>()
-{
-  return "arduinobot_msgs::srv::AddTwoInts_Event";
-}
-
-template<>
-inline const char * name<arduinobot_msgs::srv::AddTwoInts_Event>()
-{
-  return "arduinobot_msgs/srv/AddTwoInts_Event";
-}
-
-template<>
-struct has_fixed_size<arduinobot_msgs::srv::AddTwoInts_Event>
-  : std::integral_constant<bool, false> {};
-
-template<>
-struct has_bounded_size<arduinobot_msgs::srv::AddTwoInts_Event>
-  : std::integral_constant<bool, has_bounded_size<arduinobot_msgs::srv::AddTwoInts_Request>::value && has_bounded_size<arduinobot_msgs::srv::AddTwoInts_Response>::value && has_bounded_size<service_msgs::msg::ServiceEventInfo>::value> {};
-
-template<>
-struct is_message<arduinobot_msgs::srv::AddTwoInts_Event>
   : std::true_type {};
 
 }  // namespace rosidl_generator_traits

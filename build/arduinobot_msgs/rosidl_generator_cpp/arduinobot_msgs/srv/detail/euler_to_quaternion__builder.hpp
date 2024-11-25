@@ -2,9 +2,6 @@
 // with input from arduinobot_msgs:srv/EulerToQuaternion.idl
 // generated code does not contain a copyright notice
 
-// IWYU pragma: private, include "arduinobot_msgs/srv/euler_to_quaternion.hpp"
-
-
 #ifndef ARDUINOBOT_MSGS__SRV__DETAIL__EULER_TO_QUATERNION__BUILDER_HPP_
 #define ARDUINOBOT_MSGS__SRV__DETAIL__EULER_TO_QUATERNION__BUILDER_HPP_
 
@@ -174,80 +171,6 @@ inline
 auto build<::arduinobot_msgs::srv::EulerToQuaternion_Response>()
 {
   return arduinobot_msgs::srv::builder::Init_EulerToQuaternion_Response_x();
-}
-
-}  // namespace arduinobot_msgs
-
-
-namespace arduinobot_msgs
-{
-
-namespace srv
-{
-
-namespace builder
-{
-
-class Init_EulerToQuaternion_Event_response
-{
-public:
-  explicit Init_EulerToQuaternion_Event_response(::arduinobot_msgs::srv::EulerToQuaternion_Event & msg)
-  : msg_(msg)
-  {}
-  ::arduinobot_msgs::srv::EulerToQuaternion_Event response(::arduinobot_msgs::srv::EulerToQuaternion_Event::_response_type arg)
-  {
-    msg_.response = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::srv::EulerToQuaternion_Event msg_;
-};
-
-class Init_EulerToQuaternion_Event_request
-{
-public:
-  explicit Init_EulerToQuaternion_Event_request(::arduinobot_msgs::srv::EulerToQuaternion_Event & msg)
-  : msg_(msg)
-  {}
-  Init_EulerToQuaternion_Event_response request(::arduinobot_msgs::srv::EulerToQuaternion_Event::_request_type arg)
-  {
-    msg_.request = std::move(arg);
-    return Init_EulerToQuaternion_Event_response(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::srv::EulerToQuaternion_Event msg_;
-};
-
-class Init_EulerToQuaternion_Event_info
-{
-public:
-  Init_EulerToQuaternion_Event_info()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_EulerToQuaternion_Event_request info(::arduinobot_msgs::srv::EulerToQuaternion_Event::_info_type arg)
-  {
-    msg_.info = std::move(arg);
-    return Init_EulerToQuaternion_Event_request(msg_);
-  }
-
-private:
-  ::arduinobot_msgs::srv::EulerToQuaternion_Event msg_;
-};
-
-}  // namespace builder
-
-}  // namespace srv
-
-template<typename MessageType>
-auto build();
-
-template<>
-inline
-auto build<::arduinobot_msgs::srv::EulerToQuaternion_Event>()
-{
-  return arduinobot_msgs::srv::builder::Init_EulerToQuaternion_Event_info();
 }
 
 }  // namespace arduinobot_msgs

@@ -1,1 +1,83 @@
-/home/farr97/arduinobot_ws/src/arduinobot_description/urdf/arduinobot_ros2_control.xacro
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:arg name="is_ignition" default="true"/>
+
+    <ros2_control name="RobotSystem" type="system">
+
+        <xacro:property name="PI" value="3.141592653589793"/>
+        <xacro:property name="PI_2" value="${PI / 2.0}"/>
+
+        <!-- Gazebo system plugin -->
+        <xacro:property name="system" value="ros_gz_sim"/>
+        <xacro:if value="$(arg is_ignition)">
+            <hardware>
+                <plugin>ign_ros2_control/IgnitionSystem</plugin>
+            </hardware>
+        </xacro:if> 
+
+        <xacro:unless value="$(arg is_ignition)">
+            <hardware>
+                <plugin>arduinobot_controller/ArduinobotInterface</plugin>
+                <param name="serial_port">/dev/ttyACM0</param>
+            </hardware>
+        </xacro:unless>
+        
+        <!-- Base plate joint -->
+        <joint name="base_to_base_plate">
+            <command_interface name="position">
+                <param name="min">-${PI_2}</param>
+                <param name="max">${PI_2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <!-- Arm joints -->
+        <joint name="base_plate_to_arm_1">
+            <command_interface name="position">
+                <param name="min">-${PI_2}</param>
+                <param name="max">${PI_2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="arm_1_to_arm_2">
+            <command_interface name="position">
+                <param name="min">-${PI_2}</param>
+                <param name="max">${PI_2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="arm_2_to_inner_circle">
+            <command_interface name="position">
+                <param name="min">-${PI}</param>
+                <param name="max">0.0</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="arm_2_to_arm_3">
+            <command_interface name="position">
+                <param name="min">-${PI_2}</param>
+                <param name="max">${PI_2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+    <!-- Gazebo ros2_control plugin -->
+    <gazebo>
+        <plugin filename="libgz_sim_ros2_control-system.so"
+                name="gz_sim_ros2_control">
+            <parameters>$(find arduinobot_description)/config/ros2_controllers.yaml</parameters>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+        </plugin>
+    </gazebo>
+
+</robot>

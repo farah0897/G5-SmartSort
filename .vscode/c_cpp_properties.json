@@ -4,13 +4,12 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/ros/jazzy/include/**",
-                "/opt/ros/jazzy/include/rclcpp"
+                "/opt/ros/humble/include/**"    // Adjust "humble" if using a different ROS 2 distribution
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "c++14"
         }
     ],
     "version": 4

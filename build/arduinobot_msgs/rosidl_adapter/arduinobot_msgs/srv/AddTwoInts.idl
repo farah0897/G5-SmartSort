@@ -8,9 +8,9 @@ module arduinobot_msgs {
     @verbatim (language="comment", text=
       "Request")
     struct AddTwoInts_Request {
-      int64 a;
+      int64 first;
 
-      int64 b;
+      int64 second;
     };
     @verbatim (language="comment", text=
       "Response")

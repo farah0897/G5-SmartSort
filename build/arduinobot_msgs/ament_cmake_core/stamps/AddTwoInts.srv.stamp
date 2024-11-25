@@ -1,6 +1,6 @@
 # Request
-int64 a
-int64 b
+int64 first
+int64 second
 ---
-#Response
+# Response
 int64 sum

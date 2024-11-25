@@ -1,1 +1,23 @@
-/home/farr97/arduinobot_ws/src/arduinobot_moveit/config/moveit_controllers.yaml
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+controller_names:
+  - arm_controller
+  - gripper_controller
+
+arm_controller:
+  type: FollowJointTrajectory
+  joints:
+    - base_link_to_base_plate
+    - base_plate_to_arm_1
+    - arm_1_to_arm_2
+  action_ns: follow_joint_trajectory
+  default: true
+
+gripper_controller:
+  type: FollowJointTrajectory
+  joints:
+    - inner_circle_to_gripper_1
+    - inner_circle_to_gripper_2
+    - inner_circle_to_gripper_3
+  action_ns: follow_joint_trajectory
+  default: true

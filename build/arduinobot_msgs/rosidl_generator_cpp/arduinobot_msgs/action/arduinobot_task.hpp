@@ -7,6 +7,5 @@
 #include "arduinobot_msgs/action/detail/arduinobot_task__struct.hpp"
 #include "arduinobot_msgs/action/detail/arduinobot_task__builder.hpp"
 #include "arduinobot_msgs/action/detail/arduinobot_task__traits.hpp"
-#include "arduinobot_msgs/action/detail/arduinobot_task__type_support.hpp"
 
 #endif  // ARDUINOBOT_MSGS__ACTION__ARDUINOBOT_TASK_HPP_

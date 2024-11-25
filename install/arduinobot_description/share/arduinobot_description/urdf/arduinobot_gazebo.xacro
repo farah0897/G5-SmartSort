@@ -1,1 +1,49 @@
-/home/farr97/arduinobot_ws/src/arduinobot_description/urdf/arduinobot_gazebo.xacro
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Gazebo Colors -->
+    <gazebo reference="base_link">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="base_plate">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="arm_1">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="arm_2">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="arm_3">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="inner_circle">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="gripper_1">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="gripper_2">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="gripper_3">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <!-- Gazebo plugins -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/arduinobot</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+</robot> 

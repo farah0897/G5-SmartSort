@@ -101,7 +101,7 @@ arduinobot_msgs__action__ArduinobotTask_Goal__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_Goal *
-arduinobot_msgs__action__ArduinobotTask_Goal__create(void)
+arduinobot_msgs__action__ArduinobotTask_Goal__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_Goal * msg = (arduinobot_msgs__action__ArduinobotTask_Goal *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_Goal), allocator.state);
@@ -350,7 +350,7 @@ arduinobot_msgs__action__ArduinobotTask_Result__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_Result *
-arduinobot_msgs__action__ArduinobotTask_Result__create(void)
+arduinobot_msgs__action__ArduinobotTask_Result__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_Result * msg = (arduinobot_msgs__action__ArduinobotTask_Result *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_Result), allocator.state);
@@ -599,7 +599,7 @@ arduinobot_msgs__action__ArduinobotTask_Feedback__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_Feedback *
-arduinobot_msgs__action__ArduinobotTask_Feedback__create(void)
+arduinobot_msgs__action__ArduinobotTask_Feedback__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_Feedback * msg = (arduinobot_msgs__action__ArduinobotTask_Feedback *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_Feedback), allocator.state);
@@ -861,7 +861,7 @@ arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_SendGoal_Request *
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__create(void)
+arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_SendGoal_Request * msg = (arduinobot_msgs__action__ArduinobotTask_SendGoal_Request *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Request), allocator.state);
@@ -1109,7 +1109,7 @@ arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_SendGoal_Response *
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__create(void)
+arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_SendGoal_Response * msg = (arduinobot_msgs__action__ArduinobotTask_SendGoal_Response *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Response), allocator.state);
@@ -1289,288 +1289,6 @@ arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__Sequence__copy(
 
 
 // Include directives for member types
-// Member `info`
-#include "service_msgs/msg/detail/service_event_info__functions.h"
-// Member `request`
-// Member `response`
-// already included above
-// #include "arduinobot_msgs/action/detail/arduinobot_task__functions.h"
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__init(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * msg)
-{
-  if (!msg) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__init(&msg->info)) {
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(msg);
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__Sequence__init(&msg->request, 0)) {
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(msg);
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__Sequence__init(&msg->response, 0)) {
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(msg);
-    return false;
-  }
-  return true;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * msg)
-{
-  if (!msg) {
-    return;
-  }
-  // info
-  service_msgs__msg__ServiceEventInfo__fini(&msg->info);
-  // request
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__Sequence__fini(&msg->request);
-  // response
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__Sequence__fini(&msg->response);
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__are_equal(const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * lhs, const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__are_equal(
-      &(lhs->info), &(rhs->info)))
-  {
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__Sequence__are_equal(
-      &(lhs->request), &(rhs->request)))
-  {
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__Sequence__are_equal(
-      &(lhs->response), &(rhs->response)))
-  {
-    return false;
-  }
-  return true;
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__copy(
-  const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * input,
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__copy(
-      &(input->info), &(output->info)))
-  {
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Request__Sequence__copy(
-      &(input->request), &(output->request)))
-  {
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Response__Sequence__copy(
-      &(input->response), &(output->response)))
-  {
-    return false;
-  }
-  return true;
-}
-
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event *
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__create(void)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * msg = (arduinobot_msgs__action__ArduinobotTask_SendGoal_Event *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event), allocator.state);
-  if (!msg) {
-    return NULL;
-  }
-  memset(msg, 0, sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event));
-  bool success = arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__init(msg);
-  if (!success) {
-    allocator.deallocate(msg, allocator.state);
-    return NULL;
-  }
-  return msg;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__destroy(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * msg)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  if (msg) {
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(msg);
-  }
-  allocator.deallocate(msg, allocator.state);
-}
-
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__init(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * array, size_t size)
-{
-  if (!array) {
-    return false;
-  }
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * data = NULL;
-
-  if (size) {
-    data = (arduinobot_msgs__action__ArduinobotTask_SendGoal_Event *)allocator.zero_allocate(size, sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event), allocator.state);
-    if (!data) {
-      return false;
-    }
-    // initialize all array elements
-    size_t i;
-    for (i = 0; i < size; ++i) {
-      bool success = arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__init(&data[i]);
-      if (!success) {
-        break;
-      }
-    }
-    if (i < size) {
-      // if initialization failed finalize the already initialized array elements
-      for (; i > 0; --i) {
-        arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(&data[i - 1]);
-      }
-      allocator.deallocate(data, allocator.state);
-      return false;
-    }
-  }
-  array->data = data;
-  array->size = size;
-  array->capacity = size;
-  return true;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__fini(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * array)
-{
-  if (!array) {
-    return;
-  }
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-
-  if (array->data) {
-    // ensure that data and capacity values are consistent
-    assert(array->capacity > 0);
-    // finalize all array elements
-    for (size_t i = 0; i < array->capacity; ++i) {
-      arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(&array->data[i]);
-    }
-    allocator.deallocate(array->data, allocator.state);
-    array->data = NULL;
-    array->size = 0;
-    array->capacity = 0;
-  } else {
-    // ensure that data, size, and capacity values are consistent
-    assert(0 == array->size);
-    assert(0 == array->capacity);
-  }
-}
-
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence *
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__create(size_t size)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * array = (arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence), allocator.state);
-  if (!array) {
-    return NULL;
-  }
-  bool success = arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__init(array, size);
-  if (!success) {
-    allocator.deallocate(array, allocator.state);
-    return NULL;
-  }
-  return array;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__destroy(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * array)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  if (array) {
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__fini(array);
-  }
-  allocator.deallocate(array, allocator.state);
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__are_equal(const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * lhs, const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  if (lhs->size != rhs->size) {
-    return false;
-  }
-  for (size_t i = 0; i < lhs->size; ++i) {
-    if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__are_equal(&(lhs->data[i]), &(rhs->data[i]))) {
-      return false;
-    }
-  }
-  return true;
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence__copy(
-  const arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * input,
-  arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__Sequence * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  if (output->capacity < input->size) {
-    const size_t allocation_size =
-      input->size * sizeof(arduinobot_msgs__action__ArduinobotTask_SendGoal_Event);
-    rcutils_allocator_t allocator = rcutils_get_default_allocator();
-    arduinobot_msgs__action__ArduinobotTask_SendGoal_Event * data =
-      (arduinobot_msgs__action__ArduinobotTask_SendGoal_Event *)allocator.reallocate(
-      output->data, allocation_size, allocator.state);
-    if (!data) {
-      return false;
-    }
-    // If reallocation succeeded, memory may or may not have been moved
-    // to fulfill the allocation request, invalidating output->data.
-    output->data = data;
-    for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__init(&output->data[i])) {
-        // If initialization of any new item fails, roll back
-        // all previously initialized items. Existing items
-        // in output are to be left unmodified.
-        for (; i-- > output->capacity; ) {
-          arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__fini(&output->data[i]);
-        }
-        return false;
-      }
-    }
-    output->capacity = input->size;
-  }
-  output->size = input->size;
-  for (size_t i = 0; i < input->size; ++i) {
-    if (!arduinobot_msgs__action__ArduinobotTask_SendGoal_Event__copy(
-        &(input->data[i]), &(output->data[i])))
-    {
-      return false;
-    }
-  }
-  return true;
-}
-
-
-// Include directives for member types
 // Member `goal_id`
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__functions.h"
@@ -1632,7 +1350,7 @@ arduinobot_msgs__action__ArduinobotTask_GetResult_Request__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_GetResult_Request *
-arduinobot_msgs__action__ArduinobotTask_GetResult_Request__create(void)
+arduinobot_msgs__action__ArduinobotTask_GetResult_Request__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_GetResult_Request * msg = (arduinobot_msgs__action__ArduinobotTask_GetResult_Request *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Request), allocator.state);
@@ -1881,7 +1599,7 @@ arduinobot_msgs__action__ArduinobotTask_GetResult_Response__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_GetResult_Response *
-arduinobot_msgs__action__ArduinobotTask_GetResult_Response__create(void)
+arduinobot_msgs__action__ArduinobotTask_GetResult_Response__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_GetResult_Response * msg = (arduinobot_msgs__action__ArduinobotTask_GetResult_Response *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Response), allocator.state);
@@ -2061,289 +1779,6 @@ arduinobot_msgs__action__ArduinobotTask_GetResult_Response__Sequence__copy(
 
 
 // Include directives for member types
-// Member `info`
-// already included above
-// #include "service_msgs/msg/detail/service_event_info__functions.h"
-// Member `request`
-// Member `response`
-// already included above
-// #include "arduinobot_msgs/action/detail/arduinobot_task__functions.h"
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__init(arduinobot_msgs__action__ArduinobotTask_GetResult_Event * msg)
-{
-  if (!msg) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__init(&msg->info)) {
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(msg);
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Request__Sequence__init(&msg->request, 0)) {
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(msg);
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Response__Sequence__init(&msg->response, 0)) {
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(msg);
-    return false;
-  }
-  return true;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(arduinobot_msgs__action__ArduinobotTask_GetResult_Event * msg)
-{
-  if (!msg) {
-    return;
-  }
-  // info
-  service_msgs__msg__ServiceEventInfo__fini(&msg->info);
-  // request
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Request__Sequence__fini(&msg->request);
-  // response
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Response__Sequence__fini(&msg->response);
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__are_equal(const arduinobot_msgs__action__ArduinobotTask_GetResult_Event * lhs, const arduinobot_msgs__action__ArduinobotTask_GetResult_Event * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__are_equal(
-      &(lhs->info), &(rhs->info)))
-  {
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Request__Sequence__are_equal(
-      &(lhs->request), &(rhs->request)))
-  {
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Response__Sequence__are_equal(
-      &(lhs->response), &(rhs->response)))
-  {
-    return false;
-  }
-  return true;
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__copy(
-  const arduinobot_msgs__action__ArduinobotTask_GetResult_Event * input,
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Event * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  // info
-  if (!service_msgs__msg__ServiceEventInfo__copy(
-      &(input->info), &(output->info)))
-  {
-    return false;
-  }
-  // request
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Request__Sequence__copy(
-      &(input->request), &(output->request)))
-  {
-    return false;
-  }
-  // response
-  if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Response__Sequence__copy(
-      &(input->response), &(output->response)))
-  {
-    return false;
-  }
-  return true;
-}
-
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event *
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__create(void)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Event * msg = (arduinobot_msgs__action__ArduinobotTask_GetResult_Event *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Event), allocator.state);
-  if (!msg) {
-    return NULL;
-  }
-  memset(msg, 0, sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Event));
-  bool success = arduinobot_msgs__action__ArduinobotTask_GetResult_Event__init(msg);
-  if (!success) {
-    allocator.deallocate(msg, allocator.state);
-    return NULL;
-  }
-  return msg;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__destroy(arduinobot_msgs__action__ArduinobotTask_GetResult_Event * msg)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  if (msg) {
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(msg);
-  }
-  allocator.deallocate(msg, allocator.state);
-}
-
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__init(arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * array, size_t size)
-{
-  if (!array) {
-    return false;
-  }
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Event * data = NULL;
-
-  if (size) {
-    data = (arduinobot_msgs__action__ArduinobotTask_GetResult_Event *)allocator.zero_allocate(size, sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Event), allocator.state);
-    if (!data) {
-      return false;
-    }
-    // initialize all array elements
-    size_t i;
-    for (i = 0; i < size; ++i) {
-      bool success = arduinobot_msgs__action__ArduinobotTask_GetResult_Event__init(&data[i]);
-      if (!success) {
-        break;
-      }
-    }
-    if (i < size) {
-      // if initialization failed finalize the already initialized array elements
-      for (; i > 0; --i) {
-        arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(&data[i - 1]);
-      }
-      allocator.deallocate(data, allocator.state);
-      return false;
-    }
-  }
-  array->data = data;
-  array->size = size;
-  array->capacity = size;
-  return true;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__fini(arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * array)
-{
-  if (!array) {
-    return;
-  }
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-
-  if (array->data) {
-    // ensure that data and capacity values are consistent
-    assert(array->capacity > 0);
-    // finalize all array elements
-    for (size_t i = 0; i < array->capacity; ++i) {
-      arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(&array->data[i]);
-    }
-    allocator.deallocate(array->data, allocator.state);
-    array->data = NULL;
-    array->size = 0;
-    array->capacity = 0;
-  } else {
-    // ensure that data, size, and capacity values are consistent
-    assert(0 == array->size);
-    assert(0 == array->capacity);
-  }
-}
-
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence *
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__create(size_t size)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * array = (arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence), allocator.state);
-  if (!array) {
-    return NULL;
-  }
-  bool success = arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__init(array, size);
-  if (!success) {
-    allocator.deallocate(array, allocator.state);
-    return NULL;
-  }
-  return array;
-}
-
-void
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__destroy(arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * array)
-{
-  rcutils_allocator_t allocator = rcutils_get_default_allocator();
-  if (array) {
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__fini(array);
-  }
-  allocator.deallocate(array, allocator.state);
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__are_equal(const arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * lhs, const arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  if (lhs->size != rhs->size) {
-    return false;
-  }
-  for (size_t i = 0; i < lhs->size; ++i) {
-    if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Event__are_equal(&(lhs->data[i]), &(rhs->data[i]))) {
-      return false;
-    }
-  }
-  return true;
-}
-
-bool
-arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence__copy(
-  const arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * input,
-  arduinobot_msgs__action__ArduinobotTask_GetResult_Event__Sequence * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  if (output->capacity < input->size) {
-    const size_t allocation_size =
-      input->size * sizeof(arduinobot_msgs__action__ArduinobotTask_GetResult_Event);
-    rcutils_allocator_t allocator = rcutils_get_default_allocator();
-    arduinobot_msgs__action__ArduinobotTask_GetResult_Event * data =
-      (arduinobot_msgs__action__ArduinobotTask_GetResult_Event *)allocator.reallocate(
-      output->data, allocation_size, allocator.state);
-    if (!data) {
-      return false;
-    }
-    // If reallocation succeeded, memory may or may not have been moved
-    // to fulfill the allocation request, invalidating output->data.
-    output->data = data;
-    for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Event__init(&output->data[i])) {
-        // If initialization of any new item fails, roll back
-        // all previously initialized items. Existing items
-        // in output are to be left unmodified.
-        for (; i-- > output->capacity; ) {
-          arduinobot_msgs__action__ArduinobotTask_GetResult_Event__fini(&output->data[i]);
-        }
-        return false;
-      }
-    }
-    output->capacity = input->size;
-  }
-  output->size = input->size;
-  for (size_t i = 0; i < input->size; ++i) {
-    if (!arduinobot_msgs__action__ArduinobotTask_GetResult_Event__copy(
-        &(input->data[i]), &(output->data[i])))
-    {
-      return false;
-    }
-  }
-  return true;
-}
-
-
-// Include directives for member types
 // Member `goal_id`
 // already included above
 // #include "unique_identifier_msgs/msg/detail/uuid__functions.h"
@@ -2427,7 +1862,7 @@ arduinobot_msgs__action__ArduinobotTask_FeedbackMessage__copy(
 }
 
 arduinobot_msgs__action__ArduinobotTask_FeedbackMessage *
-arduinobot_msgs__action__ArduinobotTask_FeedbackMessage__create(void)
+arduinobot_msgs__action__ArduinobotTask_FeedbackMessage__create()
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   arduinobot_msgs__action__ArduinobotTask_FeedbackMessage * msg = (arduinobot_msgs__action__ArduinobotTask_FeedbackMessage *)allocator.allocate(sizeof(arduinobot_msgs__action__ArduinobotTask_FeedbackMessage), allocator.state);

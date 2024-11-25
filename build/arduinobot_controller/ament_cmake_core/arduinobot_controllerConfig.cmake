@@ -27,7 +27,7 @@ if(NOT "" STREQUAL "")
     set(_msg "${_msg} ()")
   endif()
   # optionally quiet the deprecation message
-  if(NOT arduinobot_controller_DEPRECATED_QUIET)
+  if(NOT ${arduinobot_controller_DEPRECATED_QUIET})
     message(DEPRECATION "${_msg}")
   endif()
 endif()
@@ -36,7 +36,7 @@ endif()
 set(arduinobot_controller_FOUND_AMENT_PACKAGE TRUE)
 
 # include all config extra files
-set(_extras "")
+set(_extras "ament_cmake_export_include_directories-extras.cmake;ament_cmake_export_libraries-extras.cmake;ament_cmake_export_dependencies-extras.cmake")
 foreach(_extra ${_extras})
   include("${arduinobot_controller_DIR}/${_extra}")
 endforeach()

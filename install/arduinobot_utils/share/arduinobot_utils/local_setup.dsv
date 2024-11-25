@@ -1,1 +1,2 @@
-/home/farr97/arduinobot_ws/build/arduinobot_utils/ament_cmake_environment_hooks/local_setup.dsv
+source;share/arduinobot_utils/environment/ament_prefix_path.sh
+source;share/arduinobot_utils/environment/path.sh

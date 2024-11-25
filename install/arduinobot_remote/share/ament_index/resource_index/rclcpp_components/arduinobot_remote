@@ -1,1 +1,4 @@
-/home/farr97/arduinobot_ws/build/arduinobot_remote/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/arduinobot_remote
+PLUGIN;lib/libtask_server.so
+arduinobot_remote::TaskServer;lib/libtask_server.so
+EXECUTABLE;lib/libtask_server.so
+task_server_node;lib/libtask_server.so

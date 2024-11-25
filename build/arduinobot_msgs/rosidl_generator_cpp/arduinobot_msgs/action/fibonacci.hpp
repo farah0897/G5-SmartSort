@@ -7,6 +7,5 @@
 #include "arduinobot_msgs/action/detail/fibonacci__struct.hpp"
 #include "arduinobot_msgs/action/detail/fibonacci__builder.hpp"
 #include "arduinobot_msgs/action/detail/fibonacci__traits.hpp"
-#include "arduinobot_msgs/action/detail/fibonacci__type_support.hpp"
 
 #endif  // ARDUINOBOT_MSGS__ACTION__FIBONACCI_HPP_
