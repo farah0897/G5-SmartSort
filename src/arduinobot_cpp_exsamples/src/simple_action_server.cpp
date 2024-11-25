@@ -51,10 +51,10 @@ namespace arduinobot_cpp_exsamples
 
             const auto goal = goal_handle->get_goal();
             auto feedback = std::make_shared<arduinobot_msgs::action::Fibonacci::Feedback>();
-            auto& sequence = feedback->sequence;  // Use the correct field name for Feedback
+            auto& partial_sequence= feedback->partial_sequence;  // Use the correct field name for Feedback
 
-            sequence.push_back(0);
-            sequence.push_back(1);
+            partial_sequence.push_back(0);
+            partial_sequence.push_back(1);
 
             auto result = std::make_shared<arduinobot_msgs::action::Fibonacci::Result>();
 
@@ -62,20 +62,20 @@ namespace arduinobot_cpp_exsamples
             {
                 if (goal_handle->is_canceling())  // Use the correct method
                 {
-                    result->sequence = sequence;
+                    result->partial_sequence= partial_sequence;
                     goal_handle->canceled(result);
                     RCLCPP_INFO(this->get_logger(), "Goal canceled");
                     return;
                 }
-                sequence.push_back(sequence[i] + sequence[i - 1]);
+                partial_sequence.push_back(partial_sequence[i] + partial_sequence[i - 1]);
                 goal_handle->publish_feedback(feedback);
-                RCLCPP_INFO(this->get_logger(), "Publish feedback: %d", feedback->sequence.back());  // Update field name
+                RCLCPP_INFO(this->get_logger(), "Publish feedback: %d", feedback->partial_sequence.back());  // Update field name
                 loop_rate.sleep();
             }
 
             if (rclcpp::ok())
             {
-                result->sequence = sequence;
+                result->partial_sequence= partial_sequence;
                 goal_handle->succeed(result);
                 RCLCPP_INFO(this->get_logger(), "Goal succeeded");
             }

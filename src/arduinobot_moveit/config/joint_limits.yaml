@@ -18,12 +18,17 @@ joint_limits:
         max_velocity: 10.0
         has_acceleration_limits: false
         max_acceleration: 0.0
-    arm_2_to_arm_3:
+    inner_circle_to_gripper_1:
         has_velocity_limits: true
         max_velocity: 10.0
         has_acceleration_limits: false
         max_acceleration: 0.0
-    gripper_support_to_inner_circle:
+    inner_circle_to_gripper_2:
+        has_velocity_limits: true
+        max_velocity: 10.0
+        has_acceleration_limits: false
+        max_acceleration: 0.0
+    inner_circle_to_gripper_3:
         has_velocity_limits: true
         max_velocity: 10.0
         has_acceleration_limits: false

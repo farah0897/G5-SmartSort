@@ -3,5 +3,6 @@ initial_positions:
         base_link_to_base_plate: 0
         base_plate_to_arm_1: 0
         arm_1_to_arm_2: 0
-        arm_2_to_arm_3: 0
-        gripper_support_to_inner_circle: 0 
+        inner_circle_to_gripper_1: 0
+        inner_circle_to_gripper_2: 0
+        inner_circle_to_gripper_3: 0

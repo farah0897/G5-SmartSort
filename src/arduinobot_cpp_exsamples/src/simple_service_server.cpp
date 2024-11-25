@@ -17,10 +17,10 @@ private:
 
     void serviceCallback(const std::shared_ptr<arduinobot_msgs::srv::AddTwoInts::Request> request, const std::shared_ptr<arduinobot_msgs::srv::AddTwoInts::Response> response)
     {
-        
-        RCLCPP_INFO_STREAM(rclcpp::get_logger("rclcpp"), "Incoming request Received: a: " << request->a << " b: " << request->b);
-        response->sum = request->a + request->b;
-        RCLCPP_INFO_STREAM(rclcpp::get_logger("rclcpp"), "Sending back response: " << response->sum);
+        RCLCPP_INFO_STREAM(rclcpp::get_logger("rclcpp"), 
+            "Incoming request Received: first: " << request->first << " second: " << request->second);
+        response->sum = request->first + request->second;
+        RCLCPP_INFO_STREAM(rclcpp::get_logger("rclcpp"), "Sending response: " << response->sum);
     }
 };
 

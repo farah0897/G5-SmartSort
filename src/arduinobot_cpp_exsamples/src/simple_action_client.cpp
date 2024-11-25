@@ -61,7 +61,7 @@ private:
         rclcpp_action::ClientGoalHandle<arduinobot_msgs::action::Fibonacci>::SharedPtr,
         const std::shared_ptr<const arduinobot_msgs::action::Fibonacci::Feedback> feedback)
     {
-        RCLCPP_INFO(this->get_logger(), "Next number in sequence: %d", feedback->sequence.back());
+        RCLCPP_INFO(this->get_logger(), "Next number in partial_sequence: %d", feedback->partial_sequence.back());
     }
 
     void result_callback(
@@ -90,7 +90,7 @@ private:
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    auto action_client = std::make_shared<SimpleActionClient>();
+    auto action_client = std::make_shared<SimpleActionClient>();   
     rclcpp::spin(action_client);
     rclcpp::shutdown();
     return 0;

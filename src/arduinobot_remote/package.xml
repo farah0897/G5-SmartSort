@@ -3,11 +3,12 @@
 <package format="3">
   <name>arduinobot_remote</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="abdul200@live.no">farr97</maintainer>
+  <description>Package for Alexa interface with ArduinoBot</description>
+  <maintainer email="your_email@email.com">your_name</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
 
   <depend>rclcpp</depend>
   <depend>rclcpp_action</depend>
@@ -15,9 +16,25 @@
   <depend>moveit_ros_planning_interface</depend>
   <depend>moveit_core</depend>
   <depend>arduinobot_msgs</depend>
+  <depend>rclpy</depend>
+  <depend>arduinobot_moveit</depend>
+  <depend>arduinobot_description</depend>
+
+  <!-- Launch dependencies -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <!-- Python dependencies -->
+  <exec_depend>python3-flask</exec_depend>
+  <exec_depend>python3-flask-ask-sdk</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

@@ -18,6 +18,7 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
+
 # Simple Publisher
 add_executable(simple_publisher src/simple_publisher.cpp)
 ament_target_dependencies(simple_publisher "rclcpp" "std_msgs")
@@ -46,6 +47,7 @@ ament_target_dependencies(simple_action_client
   "arduinobot_msgs"
 )
 
+
 # Simple MoveIt Interface
 add_executable(simple_moveit_interface src/simple_moveit_interface.cpp)
 ament_target_dependencies(simple_moveit_interface
@@ -55,6 +57,7 @@ ament_target_dependencies(simple_moveit_interface
   "tf2_ros"
   "tf2_geometry_msgs"
   "geometry_msgs"
+  "arduinobot_msgs"
 )
 
 # Simple Action Server Library
@@ -83,6 +86,11 @@ install(TARGETS
   simple_service_client
   simple_moveit_interface
   DESTINATION lib/${PROJECT_NAME}
+)
+
+target_link_libraries(simple_action_server
+  rclcpp::rclcpp
+  rclcpp_action::rclcpp_action
 )
 
 install(TARGETS 

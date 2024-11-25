@@ -8,6 +8,9 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(SERIAL libserial)
 
 # Finn LibSerial
 find_path(LIBSERIAL_INCLUDE_DIR libserial/SerialPort.h
@@ -28,7 +31,7 @@ ament_target_dependencies(serial_transmitter
     std_msgs
 )
 
-target_include_directories(serial_transmitter PRIVATE
+target_include_directories(serial_transmitter PUBLIC
     ${LIBSERIAL_INCLUDE_DIR}
 )
 
@@ -36,10 +39,29 @@ target_link_libraries(serial_transmitter
     ${LIBSERIAL_LIBRARY}
 )
 
+add_executable(serial_receiver src/serial_receiver.cpp)
+ament_target_dependencies(serial_receiver
+    rclcpp
+    std_msgs
+)
+
+target_include_directories(serial_receiver PUBLIC
+    ${LIBSERIAL_INCLUDE_DIR}
+)
+
+target_link_libraries(serial_receiver
+    ${LIBSERIAL_LIBRARY}
+)
+
 install(TARGETS
     serial_transmitter
+    serial_receiver
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
     DESTINATION lib/${PROJECT_NAME}
 )
+
 
 if(BUILD_TESTING)
     find_package(ament_lint_auto REQUIRED)

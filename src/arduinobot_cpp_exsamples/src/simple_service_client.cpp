@@ -6,12 +6,12 @@
 class SimpleServiceClient : public rclcpp::Node
 {
 public:
-    SimpleServiceClient(int a, int b) : Node("simple_service_client")
+    SimpleServiceClient(int first, int second) : Node("simple_service_client")
     {
         client_ = create_client<arduinobot_msgs::srv::AddTwoInts>("add_two_ints");
      auto request = std::make_shared<arduinobot_msgs::srv::AddTwoInts::Request>();
-        request->a = a;
-        request->b = b;
+        request->first = first;
+        request->second = second;
 
         while (!client_->wait_for_service(std::chrono::seconds(1)))
         {
